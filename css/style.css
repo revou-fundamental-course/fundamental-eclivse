@@ -78,8 +78,7 @@ li {
 .home-text{
     display: flex;
     flex-direction: column;
-    border: 20px solid rgba(254,222,62,255);
-    border-style: double;
+    border: 20px double rgba(254,222,62,255);
     background-color: white;
     padding: 5%;
     border-radius: 100px 10px 100px 10px;
@@ -182,11 +181,162 @@ li {
     padding-top: 2rem;
 }
 
-/* REVOU VALUES */
-.revou-values {
+.revou-values-container{
     background-color: black;
+    padding: 2rem 10rem 2rem 10rem;
     color: white;
     width: 100vw;
-    height: 60vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.revou-values-container h1{
+   font-size: 48px;
+   padding-bottom: 2%;
+}
+
+/* REVOU VALUES */
+.revou-values {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 80vh;
+}
+
+.revou-values-point{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: 2px dashed rgba(254,222,62,255);
+    border-radius: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease-in-out;
+}
+
+.revou-values-point:hover{
+    background-color: white;
+    color: black;
+    transform: translateY(-10px) ;
+}
+
+.star{
+    width: 50px;
+    height: 50px;
+    align-self: baseline;
+    padding-bottom: 10px;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-title{
+    width: 100vw;
+    height: 10%;
+    padding: 1rem;
+    background-color: rgba(254,222,62,255);;
+    text-align: center;
+}
+
+.portfolio-results{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 90%;
+}
+
+.card{
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 darkgrey;
+    height: 80%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.portfolio-img{
+    width: 100%;
+    height: 40%;
+}
+
+.card .container{
+    padding: 1rem;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .button {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.card .button:hover{
+    background-color: rgba(254,222,62,255);
+}
+
+/* HQ */
+.hq {
+    width: 100vw;
+    height: 50vh;
+    background-color: rgba(254,222,62,255);
+}
+
+.hq-place-container{
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hq-place{
+    padding-bottom: 4rem;
+    width: 20%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hq-middle{
+    padding-bottom: 0;
+    padding-top: 2rem;
+}
+
+.hq-place img{
+    width: 50%;
+    border-radius: 50%;
+    padding-bottom: 1rem;
 }
 
