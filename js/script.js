@@ -218,6 +218,6 @@ window.onload = ()=>{
         clearForm();
     })
     
-    initializePage();
+    // initializePage();
 }
 
