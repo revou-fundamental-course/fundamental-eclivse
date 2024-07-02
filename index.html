@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar" id="navbar">
       <div class="logo"><img src="assets/logo.webp" alt="" /></div>
       <ul class="navbar-options">
-        <li>Hi, <span id="username"></span></li>
-        <li>Home</li>
-        <li>Our Profile</li>
-        <li>Products</li>
-        <li>Projects</li>
-        <li>Message Us</li>
+        <li id="username-container">Hi <span id="username"></span></li>
+        <li id="li-home" data-target="home">Home</li>
+        <li id="li-profile" data-target="our-profile">Our Profile</li>
+        <li id="li-product" data-target="product">Products</li>
+        <li id="li-project" data-target="project">Projects</li>
+        <li id="li-message" data-target="message-us">Message Us</li>
       </ul>
     </header>
       <!-- HOME -->
-      <div class="home">
+      <div class="home" id="home">
 
-        <div class="home-text">
+        <div class="home-text glow">
           <h2>Welcome to Moradon Berlian Sakti</h2>
           <h1>
             Ready to illuminate your way 💡
@@ -29,19 +29,16 @@
         </div>
       </div>
       <!-- OUR PROFILE -->
-      <div class="our-profile">
+      <div class="our-profile" id="our-profile">
         <!-- INTRODUCTION -->
         <div class="intro">
           <div class="intro-img">
-            <div class="floating-div" id="floating-div1"></div>
-            <img id="intro-img1" src="assets/intro1.webp" alt="" />
-            <img id="intro-img2" src="assets/intro2.webp" alt="" />
+            <div class="floating-div" id="floating-div1"><img src="assets/lamp aesthetic.jpg" alt=""></div>
           </div>
-          <div class="intro-text">
+          <div class="intro-text glow">
             <p>
-              Established since 1984 with a small workshop producing aluminum grilles and decorative fences, Moradon has achieved success in expanding into the automotive parts industry for two-wheeled and four-wheeled vehicles.
-Over time and with the growth of the group, Moradon transformed into a die casting service industry and opened a new, larger factory with advanced equipment and skilled workforce. 
-              Starting 2009, we developed a new product related to lighting, both for households and industries. The product we introduced is LED technology-based lamps. We offer a wide range of product variations, including lamp designs, sizes, power options, spare parts, accessories, and, most importantly, at a more economical price compared to existing lamps.
+              Established since 1984 with a small workshop producing aluminum grilles and decorative fences, Moradon has achieved success in expanding into the automotive parts industry<br><br>
+              Starting 2009, we developed a new product related to lighting, both for households and industries. The product we introduced is LED technology-based lamps. We offer a wide range of product variations, including lamp designs, sizes, power options, spare parts, accessories, and, most importantly, at a more economical price compared to existing lamps.<br><br>
               Currently, PT Moradon Berlian Sakti has 300 trained employees, adequate equipment for both the domestic and international markets, and ISO 9001:2008 management system. We exist as one of the LED Light manufacturers in the national and international markets, particularly in Europe.
             </p>
           </div>
@@ -49,10 +46,10 @@ Over time and with the growth of the group, Moradon transformed into a die casti
 
               <!-- BASIC CORE-->
       <div class="basic-core">
-        <div class="basic-core-title">        <h1>We provide solutions that:</h1>
+        <div class="basic-core-title glow">        <h1>We provide solutions that:</h1>
         </div>
         <div class="basic-core-results">
-            <div class="card">
+            <div class="card glow">
                 <div class="container">
                   <h2>Last long
                   </h2>
@@ -64,7 +61,7 @@ Over time and with the growth of the group, Moradon transformed into a die casti
                 </div>
               </div>
 
-              <div class="card">
+              <div class="card glow">
                 <div class="container">
                   <h2>Affordable
                   </h2>
@@ -76,7 +73,7 @@ Over time and with the growth of the group, Moradon transformed into a die casti
                 </div>
               </div>
 
-              <div class="card">
+              <div class="card glow">
                 <div class="container">
                   <h2>Eco-friendly
                   </h2>
@@ -95,7 +92,7 @@ Over time and with the growth of the group, Moradon transformed into a die casti
         <h1 id="vision-mission-title">Vision & <span style="color:rgba(254,222,62,255) ;">Mission </span></h1>
         <div class="vision">
           <h3 id="vision">Vision: "To be a global leader in innovative die casting and LED lighting solutions, delivering superior quality and value to our customers while advancing sustainable manufacturing practices."</h3>
-          <h4>Mission:</h4>
+          <h4 style="font-size: larger;color: rgba(254,222,62,255);">Mission:</h4>
         </div>
         <div class="vision-mission">
             <div id="first-value" class="vision-mission-point">
@@ -136,39 +133,181 @@ Over time and with the growth of the group, Moradon transformed into a die casti
       </div>
 
       <!-- PRODUCT -->
-      <div class="product">
-        <h1>Products</h1>
+      <div class="product" id="product">
+        <h1 style="color: white; font-size: 50px; padding-top: 1.5rem;">Products</h1>
         <div class="product-catalogue">
+          <div class="product-card">
+              <div class="product-container">
+              <h3>MEL
+              </h2>
+              <br>
+              <p>IP Rating:IP67
+              </p>
+              <p>Color temp: 3000 K/5000 K
+              </p>
+              <p>LED Chip: Samsung
+              </p>
+              <p>Body Material: Aluminium Diecasted Body</p>
+              <p>Power: 120, 240, 400, 480, 500, 600 Watt</p>
+              <p>Voltage: 180 - 240 V</p>
+              <p>Efficacy: 120 Lumens / Watt</p>
+              <p>Power Factor: 0.9</p>
+              <p>Weight: 5, 10, 20 Kg</p>
+            </div>
+            <img class="product-img" src="assets/product-mel.webp" alt="">
+          </div>
 
+          <div class="product-card">
+            <div class="product-container">
+            <h3>MES
+            </h2>
+            <br>
+            <p>IP Rating:IP67
+            </p>
+            <p>Color temp: 3000 K/5000 K
+            </p>
+            <p>LED Chip: Samsung
+            </p>
+            <p>Body Material: Aluminium Diecasted Body</p>
+            <p>Power: 60, 90, 100, 120, 200 Watt</p>
+            <p>Voltage: 180 - 240 V</p>
+            <p>Efficacy: 120 Lumens / Watt</p>
+            <p>Power Factor: 0,90</p>
+            <p>Weight: 10 Kg</p>
+          </div>
+          <img class="product-img" src="assets/product-mes.webp" alt="">
+        </div>
+
+        <div class="product-card">
+          <div class="product-container">
+          <h3>SLE-N
+          </h2>
+          <br>
+          <p>IP Rating:IP67
+          </p>
+          <p>Color temp: 3000 K/5000 K
+          </p>
+          <p>LED Chip: Samsung
+          </p>
+          <p>Body Material: Aluminium Diecasted Body</p>
+          <p>Power: 20, 30, 40, 60 Watt</p>
+          <p>Voltage: 180 - 240 V</p>
+          <p>Efficacy: 160 Lm/Watt</p>
+          <p>Power Factor: 0.95</p>
+          <p>Weight: 3 Kg</p>
+        </div>
+        <img class="product-img" src="assets/product-sle-n.webp" alt="">
+      </div>
         </div>
       </div>
 
-      <!-- CLIENT -->
+      <div class="client-project">
+       <!-- PROJECT -->
+        <div class="project" id="project">
+          <h1>Projects</h1>
+          <div class="project-list">            
+            <img src="assets/project-sumatra.webp" alt="Sumatra">
+            <img src="assets/project-tegal.webp">
+            <img src="assets/project-daan-mogot.webp">
+            <img src="assets/project-daan-mogot2.webp">
+            <img src="assets/project-manado.webp">
+            <img src="assets/project-manado2.webp">
+
+          </div>
+        </div>
+
+              <!-- CLIENT -->
        <div class="client">
-        <h1>Client</h1>
-        <div class="client-list">
-          
+        <h1 style="color: rgba(254,222,62,255);">Client</h1>
+        <div class="client-list glow">
+          <div class="client-container">
+            <img src="assets/astra.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/denpasar.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/musi-rawas.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/medan.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/tangsel.svg" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/sumenep.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/tegal.png" alt="">
+          </div>
         </div>
        </div>
-
-       <!-- PROJECT -->
-        <div class="project">
-          <h1>Projects</h1>
-          <div class="project-list">project-list</div>
-        </div>
-
+      </div>
 
       <!-- MESSAGE US -->
-      <div class="message-us">
-        <h1>Interested to be our client? Message us!</h1>
+      <div class="message-us" id="message-us">
+        <h1 style="color: white; text-align: center; height: 10vh; padding-top: 1.5rem;">Interested to be our client? Message us!</h1>
         <div class="form-container">
-          <div class="input-form">fadsfasdf</div>
-          <div class="output-form">sdfsadfadsaf</div>
+          <div class="input-form">
+            <form action="">
+              <label for="name">Name: </label>
+              <input type="text" id="name" name="name">
+              <br>
+              <label for="companyName" >Company Name: </label>
+              <input type="text" id="companyName" name="companyName" placeholder="Leave it blank if none">
+              <br>
+              <label for="phoneNumber">Phone Number: </label>
+              <input type="text" id="phoneNumber" name="phoneNumber">
+              <br>
+              <label for="email">Email: </label>
+              <input type="text" id="email" name="email">
+              <br>
+              <br>
+              <label for="reason">Main reason reaching us: </label>
+              <br><br>
+              <input type="radio" id="purchase" name="reason" value="purchase">
+              <label for="purchase">Purchase items</label>
+              <br>
+              <input type="radio" id="collaborate" name="reason" value="collaborate">
+              <label for="collaborate">Request for a collaboration</label>
+              <br>
+              <input type="radio" id="inquiry" name="reason" value="inquiry">
+              <label for="inquiry">Inquiries / Complaints</label>
+              <br>
+              <p style="color: red;" id="reasonError"></p>
+              <br>
+              <label for="note">Note: </label>
+              <br>
+              <textarea rows="10" cols="50" id="note" name="note" placeholder="Leave it blank if none"></textarea>
+              <br>
+              <br>
+              <button class="button" id="show-preview">Show Preview</button>
+            </form>
+          </div>
+          <div class="output-form">
+            <div class="input-result">
+            </div>
+            <div class="button-container">
+              <button class="button" id="submit">Looking good, submit</button>
+              <button class="button" id="edit">Edit</button>
+            </div>
+          </div>
         </div>
 
       </div>
     </body>
-    <footer></footer>
+    <footer>
+      <div class="contact-us">
+        <p>PT. Moradon Berlian Sakti</p>
+        <p>No. Telfon: +6221 6510560</p>
+        <p>Jl. Agung Karya II No.12a Blok d, RT.6/RW.4, Papanggo, Tanjung Priok, North Jakarta City, Jakarta 14340, Indonesia</p>
+        <p><a style="color: white !important;" href="https://www.moradon.com">www.moradon.com</a></p>
+      </div>
+      <div class="credit">
+        <p>Copyright &copy 2024 Erica Olivia</p>
+      </div>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
