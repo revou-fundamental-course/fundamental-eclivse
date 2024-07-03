@@ -5,19 +5,1878 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: Ubuntu, Lora;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
+.glow{
+    border: 20px double black;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+    transition: box-shadow 1s ease-in-out, border 1s ease-in-out, text-shadow 1s ease-in-out;
+}
+
+.glow:hover{
+    border: 20px double rgba(254, 222, 62, 255);
+  box-shadow: 0 0 20px rgba(254, 222, 62, 255);
+  text-shadow: 1px 1px rgba(254, 222, 62, 255);
+}
+
+::placeholder {
+  color: gray;
+  font-style: italic;
+  text-align: center;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+#menu{
+  display: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes changeBackground {
+  0% { background-image: url('/assets/single-lamp.jpg'); }
+  33% { background-image: url('/assets/city-lighting.jpg'); }
+  66% { background-image: url('/assets/lamp aesthetic.jpg'); }
+  100% { background-image: url('/assets/single-lamp.jpg'); }
+}
+
+.home{
+  animation: changeBackground 20s infinite;
+}
+
+form{
+  color: grey;
+}
+
+form input, textarea{
+  box-shadow: 5px 5px 0 0 grey;
+}
+
+.output-form{
+  color: grey;
+}
+
+.button{
+  background-color: white;
+  color: grey;
+  box-shadow: 5px 5px 0 0 grey;
+}
+
+.credit{
+  flex-direction: column;
+}
+
+/* PHONE SIZE DONE*/
+@media (max-width:480px){
+/* HEADER */
+.navbar {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+div.logo {
+  width: 100px;
+  height: 10%;
+  margin-top: 0.5rem;
+}
+
+.logo img{
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  list-style: none;
+  font-size: small;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+li {
+  font-size: smaller;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  width: 90%;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+li:hover{
+  border-color: rgba(254,222,62,255); 
+  color: rgba(254,222,62,255);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.navbar-options li#username-container {
+  border: none;
+  white-space: pre;
+}
+
+.navbar-options li#username-container:hover {
+  box-shadow: none;
+}
+
+/* HOME  */
+.home {
+  padding: 5vw 5vw 6vw 5vw;
+  width: 100vw;
+  height: 50vh;
+  /* background-image: url("/assets/single-lamp.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 10%;
+  font-size: x-small;
+  width: 95%;
+  height: 60%;
+}
+
+/* OUR PROFILE */
+/* INTRO */
+.our-profile {
+  width: 100vw;
+}
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background-color: black;
+}
+
+.intro-img {
+  display: none;
+}
+
+.intro-text {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: 12px;
+  box-shadow:none;
+}
+
+/* basic-core */
+.basic-core {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.basic-core-title {
+  width: 100vw;
+  height: 10vh;
+  padding: 0.5rem;
+  border-radius: 0;
+  border-top: 5px solid rgba(254, 222, 62, 255);
+  border-bottom: 5px solid rgba(254, 222, 62, 255);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  font-size: x-small;
+}
+
+.basic-core-title:hover{
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+}
+
+.basic-core-results {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.card {
+  font-size: x-small;
+    background: black;
+    color: white;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.card:hover {
+    background-color: white;
+    color: black;
+  transform: scale(1.1);
+  border: 1px solid rgba(254,222,62,255);
+}
+
+.card .container {
+  padding: 0.5rem;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.basic-core-img {
+  padding: 1rem;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.basic-core-img img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* vision-mission */
+.vision-mission-container {
+  background-color: black;
+  padding: 2rem;
+  color: white;
+  width: 100vw;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-mission-container h1 {
+  font-size: 12px;
+}
+
+#vision-mission-title {
+  height: 3vh;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.vision{
+  padding: 0 10px;
+  font-size: small !important;
+}
+
+.vision h3, .vision h4{
+  font-size: small !important;
+}
+
+#vision {
+  width: 100%;
+  height: 10vh;
+  font-size: x-small;
+}
+
+.vision-mission {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  height: 105vh;
+}
+
+.vision-mission-point {
+  margin: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dashed rgba(254, 222, 62, 255);
+  border-radius: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+  font-size: x-small;
+  height: 30%;
+}
+
+.vision-mission-point:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+  align-self: baseline;
+  padding-bottom: 10px;
+}
+
+/* PRODUCT */
+.product{
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/city-light.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.product-catalogue{
+  margin: 20px 0;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-card{
+  margin: 0.5rem;
+  width: 70%;
+  height: 70%;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.product-container{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    background: rgba(254,222,62,0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-card:hover .product-container {
+  opacity: 0.9; 
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+/* CLIENT PROJECT */
+.client-project{
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROJECT */
+.project {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+div.project-list{
+  height: 60%;
+  width: 80%;
+  background-color: whitesmoke;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+div.project-list img {
+  height: 100%;
+  width: auto;
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* CLIENT */
+.client {
+  background-color: black;
+  color: white;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client h1{
+  overflow-y: hidden;
+}
+
+.client-list {
+  width: 100%;
+  height: 85%;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: none;
+}
+
+.client-container{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list:hover{
+  border: 5px double rgba(254,222,62,255);
+}
+
+.client-container img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+
+/* MESSAGE US */
+.message-us {
+  background-image: url("/assets/city-light.jpg");
+  background-position: left;
+  width: 100vw;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-us h1{
+  font-size: large;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.input-form {
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 80%;
+  height: 80%;
+  padding: 1rem;
+  font-size: x-small;
+  overflow-y: auto;
+}
+
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  width: 60%;
+}
+
+textarea{
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
+}
+
+#radio-group input{
+  box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
+}
+
+.output-form {
+  border-top: 5px dashed lightgrey;
+  border-style: dashed;
+  padding: 1.5rem;
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: medium;
+}
+
+.input-result{
+  width: 100%;
+  height: 60%;
+}
+
+#submit, #edit{
+  display: none;
+}
+
+.button{
+  width: 100%;
+  padding: 8px 10px;
+  margin: 10px 0 10px 0;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 0 0 lightgrey;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40%;
+  justify-content: end;
+}
+
+footer{
+  width: 100vw;
+  height: 30vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.contact-us{
+  color: white;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-size: small;
+}
+
+.credit{
+  color: white;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+  font-size: small;
+}
+}
+
+/* TABLET SIZE DONE*/
+@media (min-width:481px) and (max-width:768px){
+/* HEADER */
+.navbar {
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+div.logo {
+  width: 100%;
+  height: 40%;
+  padding: 1rem 0 0 2rem;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  padding: 8px 0 0 2vw;
+}
+
+.logo img {
+  width: 10rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-options {
+  padding: 5px 2vw 0 0;
+  display: flex;
+  width: 100%;
+  height: 60%;
+  list-style: none;
+  font-size: small;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+}
+
+li {
+  font-size: smaller;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  width: 5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+li:hover{
+  border-color: rgba(254,222,62,255); 
+  color: rgba(254,222,62,255);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.navbar-options li#username-container {
+  border: none;
+  white-space: pre;
+}
+
+.navbar-options li#username-container:hover {
+  box-shadow: none;
+}
+
+/* HOME  */
+.home {
+  padding: 5vw 5vw 6vw 5vw;
+  width: 100vw;
+  height: 50vh;
+  /* background-image: url("/assets/single-lamp.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 8%;
+  font-size: x-small !important;
+  width: 400px;
+  height: 240px;
+}
+
+/* OUR PROFILE */
+/* INTRO */
+.our-profile {
+  width: 100vw;
+}
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background-color: black;
+}
+
+.intro-img {
+  display: none;
+}
+
+.intro-text {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: 16px;
+  box-shadow:none;
+}
+
+/* basic-core */
+.basic-core {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.basic-core-title {
+  width: 100vw;
+  height: 10vh;
+  padding: 0.5rem;
+  border-radius: 0;
+  border-top: 5px solid rgba(254, 222, 62, 255);
+  border-bottom: 5px solid rgba(254, 222, 62, 255);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.basic-core-title:hover{
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+}
+
+.basic-core-results {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 65%;
+  height: 80vh;
+}
+
+.card {
+  font-size: small;
+    background: black;
+    color: white;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.card:hover {
+    background-color: white;
+    color: black;
+  transform: scale(1.1);
+  border: 1px solid rgba(254,222,62,255);
+}
+
+.card .container {
+  padding: 0.5rem;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.basic-core-img {
+  padding: 1rem;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.basic-core-img img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* vision-mission */
+.vision-mission-container {
+  background-color: black;
+  padding: 2rem;
+  color: white;
+  width: 100vw;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-mission-container h1 {
+  font-size: 36px;
+}
+
+#vision-mission-title {
+  height: 8vh;
+  font-size: xx-large;
+}
+
+.vision{
+  padding: 0 10px;
+}
+
+#vision {
+  width: 100%;
+  height: 10vh;
+  font-size: medium;
+}
+
+
+.vision-mission {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  height: 120vh;
+}
+
+
+.vision-mission-point {
+  margin: 0.5rem;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dashed rgba(254, 222, 62, 255);
+  border-radius: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+  font-size: small;
+  height: 30%;
+}
+
+.vision-mission-point:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.star {
+  width: 40px;
+  height: 40px;
+  align-self: baseline;
+  padding-bottom: 10px;
+}
+
+/* PRODUCT */
+.product{
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/city-light.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.product-catalogue{
+  margin: 20px 0;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-card{
+  margin: 0.5rem;
+  width: 70%;
+  height: 70%;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.product-container{
+    width: 90%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    background: rgba(254,222,62,0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-card:hover .product-container {
+  opacity: 0.9; 
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+/* CLIENT PROJECT */
+.client-project{
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROJECT */
+.project {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+div.project-list{
+  height: 60%;
+  width: 80%;
+  background-color: whitesmoke;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+div.project-list img {
+  height: 100%;
+  width: auto;
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* CLIENT */
+.client {
+  background-color: black;
+  color: white;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client h1{
+  overflow-y: hidden;
+}
+
+.client-list {
+  width: 100%;
+  height: 85%;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: none;
+}
+
+.client-container{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list:hover{
+  border: 5px double rgba(254,222,62,255);
+}
+
+.client-container img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+
+/* MESSAGE US */
+.message-us {
+  background-image: url("/assets/city-light.jpg");
+  background-position: left;
+  width: 100vw;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-us h1{
+  font-size: large;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.input-form {
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 80%;
+  height: 80%;
+  padding: 1rem;
+  font-size: small;
+  overflow-y: auto;
+}
+
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+}
+
+textarea{
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
+}
+
+#radio-group input{
+  box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
+}
+
+.output-form {
+  border-top: 5px dashed lightgrey;
+  border-style: dashed;
+  padding: 1.5rem;
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+}
+
+.input-result{
+  width: 80%;
+}
+
+#submit, #edit{
+  display: none;
+}
+
+.button{
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0 10px 0;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 0 0  lightgrey;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-content: end;
+}
+
+footer{
+  width: 100vw;
+  height: 30vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.contact-us{
+  color: white;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-size: small;
+}
+
+.credit{
+  color: white;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+  font-size: small;
+}
+
+}
+
+/* LAPTOP SIZE DONE*/ 
+@media (min-width: 769px) and (max-width: 1023px) {
+  /* HEADER */
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+div.logo {
+  width: 20%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  padding: 8px 0 0 2vw;
+}
+
+.logo img {
+  width: 10rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-options {
+  padding: 5px 2vw 0 0;
+  display: flex;
+  width: 80%;
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+}
+
+li {
+  font-size: smaller;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 8rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+li:hover{
+  border-color: rgba(254,222,62,255); 
+  color: rgba(254,222,62,255);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.navbar-options li#username-container {
+  border: none;
+  white-space: pre;
+}
+
+.navbar-options li#username-container:hover {
+  box-shadow: none;
+}
+
+/* HOME  */
+.home {
+  padding: 5vw 5vw 6vw 5vw;
+  width: 100vw;
+  height: 60vh;
+  /* background-image: url("/assets/single-lamp.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 8%;
+}
+
+/* OUR PROFILE */
+/* INTRO */
+.our-profile {
+  width: 100vw;
+}
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background-color: black;
+}
+
+.intro-img {
+  display: none;
+}
+
+.intro-text {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: 18px;
+  box-shadow:none;
+}
+
+/* basic-core */
+.basic-core {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.basic-core-title {
+  width: 100vw;
+  height: 10vh;
+  padding: 1rem;
+  border-radius: 0;
+  border-top: 5px solid rgba(254, 222, 62, 255);
+  border-bottom: 5px solid rgba(254, 222, 62, 255);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-core-title:hover{
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+}
+
+.basic-core-results {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+}
+
+.card {
+  font-size: small;
+    background: black;
+    color: white;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 60%;
+  width: 30%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    background-color: white;
+    color: black;
+  transform: scale(1.1);
+  border: 1px solid rgba(254,222,62,255);
+}
+
+.card .container {
+  padding: 0.5rem;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.basic-core-img {
+  padding: 1rem;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.basic-core-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* vision-mission */
+.vision-mission-container {
+  background-color: black;
+  padding: 2rem;
+  color: white;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-mission-container h1 {
+  font-size: 36px;
+}
+
+#vision-mission-title {
+  height: 8vh;
+  font-size: xx-large;
+}
+
+.vision{
+  padding: 0 10px;
+}
+
+#vision {
+  width: 100%;
+  height: 10vh;
+  font-size: medium;
+}
+
+.vision-mission {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 60vh;
+}
+
+
+.vision-mission-point {
+  padding: 1rem;
+  display: flex;
+ justify-content: center;
+  flex-direction: column;
+  border: 2px dashed rgba(254, 222, 62, 255);
+  border-radius: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+}
+
+.vision-mission-point:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.star {
+  width: 40px;
+  height: 40px;
+  align-self: baseline;
+  padding-bottom: 10px;
+}
+
+/* PRODUCT */
+.product{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/city-light.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.product-catalogue{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-card{
+  margin: 1rem;
+  width: 50%;
+  height: 50%;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.product-container{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    background: rgba(254,222,62,0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-card:hover .product-container {
+  opacity: 0.9; 
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+/* CLIENT PROJECT */
+.client-project{
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROJECT */
+.project {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+div.project-list{
+  margin-top: 2rem;
+  height: 35vh;
+  width: 70%;
+  background-color: whitesmoke;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+div.project-list img {
+  height: 100%;
+  width: auto;
+  padding: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* CLIENT */
+.client {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list {
+  margin-top: 2rem;
+  width: 100%;
+  height: 35vh;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: none;
+}
+
+.client-container{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list:hover{
+  border: 5px double rgba(254,222,62,255);
+}
+
+.client-container img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+
+/* MESSAGE US */
+.message-us {
+  background-image: url("/assets/city-light.jpg");
+  background-position: left;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+}
+
+.input-form {
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  font-size: 25px;
+  width: 60%;
+  height: 100%;
+  padding: 2rem;
+  font-size: medium;
+  overflow-y: auto;
+  font-size: large;
+}
+
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+}
+
+textarea{
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
+}
+
+#radio-group input{
+  box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
+}
+
+.output-form {
+  border-top: 5px dashed lightgrey;
+  border-style: dashed;
+  padding: 1.5rem;
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+}
+
+.input-result{
+  width: 80%;
+}
+
+#submit, #edit{
+  display: none;
+}
+
+.button{
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  margin: 10px 0 10px 0;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 0 0 lightgrey;
+
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-content: end;
+}
+
+footer{
+  width: 100vw;
+  height: 40vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.contact-us{
+  color: white;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  font-size: medium;
+}
+
+.credit{
+  color: white;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: medium;
+}
+
+}
+
+/* TEMPORARY PC SIZE DONE*/
+@media (min-width: 1024px) and (max-width:2000px) {
 /* HEADER */
 .navbar {
   width: 100vw;
   height: 10vh;
   display: flex;
   align-items: center;
+  background-color: black;
 }
 
 div.logo {
@@ -31,9 +1890,8 @@ div.logo {
 }
 
 .logo img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+  width: 10rem;
+  height: 1.5rem;
   cursor: pointer;
 }
 
@@ -51,7 +1909,8 @@ ul {
 
 li {
   margin: 0 1rem;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
   width: 8rem;
@@ -59,6 +1918,22 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+li:hover{
+  border-color: rgba(254,222,62,255); 
+  color: rgba(254,222,62,255);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.navbar-options li#username-container {
+  border: none;
+  white-space: pre;
+}
+
+.navbar-options li#username-container:hover {
+  box-shadow: none;
 }
 
 /* HOME  */
@@ -66,127 +1941,1112 @@ li {
   padding: 5vw 5vw 6vw 5vw;
   width: 100vw;
   height: 60vh;
-  background-image: url("/assets/headerr.jpg");
+  /* background-image: url("/assets/single-lamp.jpg"); */
   background-size: cover;
-  background-position: right;
+  background-attachment: fixed;
+  background-position-x: left;
+  background-position-y: bottom;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.home-text{
-    display: flex;
-    flex-direction: column;
-    border: 20px solid rgba(254,222,62,255);
-    border-style: double;
-    background-color: white;
-    padding: 5%;
-    border-radius: 100px 10px 100px 10px;
+.home-text {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 5%;
 }
 
 #home-text-h1 {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 /* OUR PROFILE */
 /* INTRO */
 .our-profile {
   width: 100vw;
+  /* border-top: 10px solid rgba(254, 222, 62, 255); */
 }
 
 .intro {
-    display: flex;
-    width: 100vw;
-    height: 60vh;
-    position: relative;
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  background-color: black;
 }
 
 .intro-img {
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro-img img{
-    width: 50%;
-    position: relative;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .floating-div {
-    position: absolute;
-    border: 10px ridge rgba(254,222,62,255);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#floating-div1 {
-    top: 100px;
-    left: 5%;
-    width: 100px;
-    height: 100px;
-    border-color: black;
-}
-
-#floating-div2{
-    top: 50px;
-    left: 10%;
-    width: 90px;
-    height: 90px;
-}
-
-#floating-div3{
-    top: 25px;
-    left: 15%;
-    width: 80px;
-    height: 80px;
-    border-color: black;
-}
-
-#floating-div4{
-    bottom: 25px;
-    left: 15%;
-    width: 80px;
-    height: 80px;
-}
-
-#floating-div5{
-    bottom: 50px;
-    left: 10%;
-    width: 90px;
-    height: 90px;
-    border-color: black;
-
-}
-
-#floating-div6 {
-    bottom: 100px;
-    left: 5%;
-    width: 100px;
-    height: 100px;
+.floating-div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .intro-text {
-    padding: 5rem;
-    border-radius: 50px 0 0 50px;
-    background-color: rgba(254,222,62,255);
-    width: 60vw;
+  padding: 5rem;
+  background-color: black;
+  color: white;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: 14px;
+  box-shadow:none;
+}
+
+#intro-section {
+  padding-top: 2rem;
+}
+
+/* basic-core */
+.basic-core {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.basic-core-title {
+  width: 100vw;
+  height: 10vh;
+  padding: 1rem;
+  border-radius: 0;
+  border-top: 5px solid rgba(254, 222, 62, 255);
+  border-bottom: 5px solid rgba(254, 222, 62, 255);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-core-title:hover{
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+}
+
+.basic-core-results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+}
+
+.card {
+    background: black;
+    color: white;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 60%;
+  width: 25%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    background-color: white;
+    color: black;
+  transform: scale(1.1);
+  border: 1px solid rgba(254,222,62,255);
+}
+
+.card .container {
+  padding: 1rem;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: small !important;
+}
+
+.basic-core-img {
+  padding: 1rem;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.basic-core-img img {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* vision-mission */
+.vision-mission-container {
+  background-color: black;
+  padding: 2rem 5rem 2rem 5rem;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-mission-container h1 {
+  font-size: 36px;
+}
+
+#vision-mission-title {
+  height: 10vh;
+}
+
+#vision {
+  width: 100%;
+  height: 10vh;
+}
+
+.vision{
+  height: 20vh;
+}
+
+.vision h3, .vision h4{
+  font-size: medium !important;
+}
+
+.vision-mission {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 60vh;
+}
+
+
+.vision-mission-point {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed rgba(254, 222, 62, 255);
+  border-radius: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+  font-size: medium !important;
+}
+
+.vision-mission-point:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  align-self: baseline;
+  padding-bottom: 10px;
+}
+
+/* PRODUCT */
+.product{
+    width: 100vw;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: justify;
-    font-size: 20px;
+    background-image: url("/assets/city-light.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.product-catalogue{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-card{
+  margin: 1rem;
+  width: 80%;
+  height: 60%;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.product-container{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    background: rgba(254,222,62,0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-card:hover .product-container {
+  opacity: 0.9; 
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+/* CLIENT PROJECT */
+.client-project{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROJECT */
+.project {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+div.project-list{
+  margin-top: 2rem;
+  height: 35vh;
+  width: 70%;
+  background-color: whitesmoke;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+div.project-list img {
+  height: 100%;
+  width: auto;
+  padding: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* CLIENT */
+.client {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list {
+  margin-top: 2rem;
+  width: 100%;
+  height: 35vh;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: none;
+}
+
+.client-container{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list:hover{
+  border: 5px double rgba(254,222,62,255);
+}
+
+.client-container img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+
+/* MESSAGE US */
+.message-us {
+  background-image: url("/assets/city-light.jpg");
+  background-position: left;
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 75vh;
+}
+
+.input-form {
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  font-size: 25px;
+  height: 90%;
+  width: 90%;
+  padding: 2rem;
+  margin: 20px 0;
+  font-size: large;
+  overflow-y: auto;
+  font-size: large;
+}
+
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  width: 60%;
+}
+
+textarea{
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
+}
+
+#radio-group input{
+  box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
+}
+
+.output-form {
+  border-left: 5px dashed lightgrey;
+  padding: 2rem;
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#submit, #edit{
+  display: none;
+}
+
+.button{
+  width: 30%;
+  padding: 8px;
+  margin: 10px 0 10px 0;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px lightgrey;
+
+}
+
+#show-preview{
+  width: 100%;
+  margin: 0;
+}
+
+footer{
+  width: 100vw;
+  height: 25vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.contact-us{
+  color: white;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  font-size: small;
+}
+
+.credit{
+  color: white;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 2rem;
+}
+
+}
+
+/* EXTRA LARGE PC SIZE */
+@media (min-width: 2001px){
+/* HEADER */
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+div.logo {
+  width: 20%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  padding: 8px 0 0 5vw;
+}
+
+.logo img {
+  width: 10rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-options {
+  padding: 8px 5vw 0 0;
+  display: flex;
+  width: 80%;
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+}
+
+li {
+  margin: 0 1rem;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+li:hover{
+  border-color: rgba(254,222,62,255); 
+  color: rgba(254,222,62,255);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.navbar-options li#username-container {
+  border: none;
+  white-space: pre;
+}
+
+.navbar-options li#username-container:hover {
+  box-shadow: none;
+}
+
+/* HOME  */
+.home {
+  padding: 5vw 5vw 6vw 5vw;
+  width: 100vw;
+  height: 60vh;
+  /* background-image: url("/assets/single-lamp.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: bottom;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 5%;
+}
+
+#home-text-h1 {
+  padding-bottom: 10px;
+}
+
+/* OUR PROFILE */
+/* INTRO */
+.our-profile {
+  width: 100vw;
+  /* border-top: 10px solid rgba(254, 222, 62, 255); */
+}
+
+.intro {
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  background-color: black;
+}
+
+.intro-img {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floating-div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-text {
+  padding: 5rem;
+  background-color: black;
+  color: white;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: larger;
+  box-shadow:none;
 }
 
 #intro-section {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
-/* REVOU VALUES */
-.revou-values {
-    background-color: black;
+/* basic-core */
+.basic-core {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.basic-core-title {
+  width: 100vw;
+  height: 10vh;
+  padding: 1rem;
+  border-radius: 0;
+  border-top: 5px solid rgba(254, 222, 62, 255);
+  border-bottom: 5px solid rgba(254, 222, 62, 255);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-core-title:hover{
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+}
+
+.basic-core-results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 40vh;
+}
+
+.card {
+    background: black;
     color: white;
-    width: 100vw;
-    height: 60vh;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 60%;
+  width: 25%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
+.card:hover {
+    background-color: white;
+    color: black;
+  transform: scale(1.1);
+  border: 1px solid rgba(254,222,62,255);
+}
+
+.card .container {
+  padding: 1rem;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: small !important;
+}
+
+.basic-core-img {
+  padding: 1rem;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.basic-core-img img {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* vision-mission */
+.vision-mission-container {
+  background-color: black;
+  padding: 2rem 5rem 2rem 5rem;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-mission-container h1 {
+  font-size: 36px;
+}
+
+#vision-mission-title {
+  height: 10vh;
+}
+
+#vision {
+  width: 100%;
+  height: 10vh;
+}
+
+.vision{
+  height: 20vh;
+  width: 100%;
+}
+
+.vision h3, .vision h4{
+  font-size: xx-large !important;
+}
+
+.vision-mission {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+  width: 100%;
+  height: 60vh;
+}
+
+
+.vision-mission-point {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed rgba(254, 222, 62, 255);
+  border-radius: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+  font-size: x-large !important;
+}
+
+.vision-mission-point:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  align-self: baseline;
+  padding-bottom: 20px;
+}
+
+/* PRODUCT */
+.product{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/city-light.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.product-catalogue{
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-card{
+  margin: 1rem;
+  width: 80%;
+  height: 60%;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.product-container{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    background: rgba(254,222,62,0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-card:hover .product-container {
+  opacity: 0.9; 
+  box-shadow: 0 0 10px rgba(254, 222, 62, 255);
+}
+
+/* CLIENT PROJECT */
+.client-project{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROJECT */
+.project {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+div.project-list{
+  margin-top: 2rem;
+  height: 35vh;
+  width: 70%;
+  background-color: whitesmoke;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+div.project-list img {
+  height: 100%;
+  width: auto;
+  padding: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* CLIENT */
+.client {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list {
+  margin-top: 2rem;
+  width: 100%;
+  height: 35vh;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: none;
+}
+
+.client-container{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list:hover{
+  border: 5px double rgba(254,222,62,255);
+}
+
+.client-container img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+
+/* MESSAGE US */
+.message-us {
+  background-image: url("/assets/city-light.jpg");
+  background-position: left;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.input-form {
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  font-size: 25px;
+  height: 100%;
+  width: 60%;
+  padding: 2rem;
+  margin: 20px 0;
+  font-size: large;
+  overflow-y: auto;
+}
+
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 20px;
+  width: 60%;
+}
+
+textarea{
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
+}
+
+#radio-group input{
+  box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
+}
+
+.output-form {
+  border-left: 5px dashed lightgrey;
+  padding: 2rem;
+  background: whitesmoke;
+  backdrop-filter: blur(15px);
+  opacity: 0.8;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: larger;
+}
+
+#submit, #edit{
+  display: none;
+}
+
+.button{
+  width: 30%;
+  padding: 8px;
+  margin: 10px 0 10px 0;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px lightgrey;
+
+}
+
+#show-preview{
+  width: 100%;
+  margin: 0;
+}
+
+footer{
+  width: 100vw;
+  height: 20vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.contact-us{
+  color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  font-size: small;
+}
+
+.credit{
+  color: white;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+}

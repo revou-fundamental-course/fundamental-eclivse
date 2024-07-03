@@ -7,93 +7,330 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo"><img src="assets/logo.jpeg" alt="" /></div>
+    <header class="navbar" id="navbar">
+      <div class="logo"><img src="assets/logo.webp" alt="" /></div>
       <ul class="navbar-options">
-        <li>Home</li>
-        <li>Our Profile</li>
-        <li>Portofolio</li>
-        <li>Message Us</li>
+        <li id="username-container">Hi <span id="username"></span></li>
+        <li id="menu">Menu</li>
+        <li id="li-home" data-target="home">Home</li>
+        <li id="li-profile" data-target="our-profile">Our Profile</li>
+        <li id="li-product" data-target="product">Products</li>
+        <li id="li-project" data-target="project">Projects</li>
+        <li id="li-message" data-target="message-us">Message Us</li>
       </ul>
     </header>
-    <body>
       <!-- HOME -->
-      <div class="home">
-        <div class="home-text">
-          <h1 id="home-text-h1">Hi,<span id="username"></span></h1>
-          <h2>Welcome to RevoU!</h2>
-          <h3>
-            Bringing real impact on people’s lives by giving them the education
-            needed to transform their careers 🚀
-          </h3>
+      <div class="home" id="home">
+
+        <div class="home-text glow">
+          <h2>Welcome to Moradon Berlian Sakti</h2>
+          <h1>
+            Ready to illuminate your way 💡
+          </h1>
         </div>
       </div>
       <!-- OUR PROFILE -->
-      <div class="our-profile">
+      <div class="our-profile" id="our-profile">
+        <!-- INTRODUCTION -->
         <div class="intro">
           <div class="intro-img">
-            <div class="floating-div" id="floating-div1"></div>
-            <div class="floating-div" id="floating-div2"></div>
-            <div class="floating-div" id="floating-div3"></div>
-            <div class="floating-div" id="floating-div4"></div>
-            <div class="floating-div" id="floating-div5"></div>
-            <div class="floating-div" id="floating-div6"></div>
-            <img src="assets/intro.png" alt="" />
+            <div class="floating-div" id="floating-div1"><img src="assets/lamp aesthetic.jpg" alt=""></div>
           </div>
-          <div class="intro-text">
+          <div class="intro-text glow">
             <p>
-              "We are an online education platform transforming the state of
-              higher education in Indonesia. 
-              We equip ambitious individuals with
-              the skills that the industry needs. 
-              Our education, job search,
-              and recruitment approach have helped our students and companies to
-              grow together to fulfill each other's potential. 
-              We
-              promise to make every one of our employees perform at their
-              maximum potential so that they can do the very best work of their
-              lives here. "
-              <section id="intro-section">Join us and
-              #FulfillYourPotential. For a complete listing of our jobs, visit
-              <a href="https://revou.co/career">https://revou.co/career</a></section>
+              Established since 1984 with a small workshop producing aluminum grilles and decorative fences, Moradon has achieved success in expanding into the automotive parts industry<br><br>
+              Starting 2009, we developed a new product related to lighting, both for households and industries. The product we introduced is LED technology-based lamps. We offer a wide range of product variations, including lamp designs, sizes, power options, spare parts, accessories, and, most importantly, at a more economical price compared to existing lamps.<br><br>
+              Currently, PT Moradon Berlian Sakti has 300 trained employees, adequate equipment for both the domestic and international markets, and ISO 9001:2008 management system. We exist as one of the LED Light manufacturers in the national and international markets, particularly in Europe.
             </p>
           </div>
         </div>
 
-        <div class="revou-values">
-          <p id="first-value">
-            Kindness: We always try to put ourselves in other people’s shoes.
-          </p>
-          <p id="second-value">
-            Candor: We are transparent and authentic with each other across all
-            levels:
-          </p>
-          <p id="third-value">
-            Highest Standards: At RevoU, we hold ourselves to the highest
-            standards -taking the concept of high standards outwards to our
-            customers, and inwards to everything we do every day. Upholding the
-            highest standards allows us to grow at all times. To become a better
-            version of ourselves and make people around us better as well
-          </p>
-          <p id="fourth-value">
-            Passion: We are passionate about life in general and work as a
-            subset of it. We want to do work that matters. Work that has a real,
-            quantifiable impact on the lives of people around us and on society
-            at large.
-          </p>
+              <!-- BASIC CORE-->
+      <div class="basic-core">
+        <div class="basic-core-title glow">        <h1>We provide solutions that:</h1>
+        </div>
+        <div class="basic-core-results">
+            <div class="card glow">
+                <div class="container">
+                  <h2>Last long
+                  </h2>
+                  <br>
+                  <p>Long lasting LED, providing up to 50,000 hours or 10 years of usage
+                  </p>
+                </div>
+                <div class="basic-core-img"><img  src="assets/last-long.webp" alt="Avatar" style="width:100%">
+                </div>
+              </div>
+
+              <div class="card glow">
+                <div class="container">
+                  <h2>Affordable
+                  </h2>
+                  <br>
+                  <p>Carefully engineered high quality products within reasonable prices
+                  </p>
+                </div>
+                <div class="basic-core-img"><img  src="assets/affordable.webp" alt="Avatar" style="width:100%">
+                </div>
+              </div>
+
+              <div class="card glow">
+                <div class="container">
+                  <h2>Eco-friendly
+                  </h2>
+                  <br>
+                  <p>We don't use mercury or other chemicals harmful  to the environment
+                  </p>
+                </div>
+                <div class="basic-core-img"><img  src="assets/eco-friendly.webp" alt="Avatar" style="width:100%">
+                </div>
+              </div>
         </div>
       </div>
 
-      <!-- PORTFOLIO -->
-      <div class="portofolio"></div>
+      <!-- VISION MISSION -->
+        <div class="vision-mission-container">
+        <h1 id="vision-mission-title">Vision & <span style="color:rgba(254,222,62,255) ;">Mission </span></h1>
+        <div class="vision">
+          <h3 id="vision">Vision: "To be a global leader in innovative die casting and LED lighting solutions, delivering superior quality and value to our customers while advancing sustainable manufacturing practices."</h3>
+          <h4 style="font-size: larger;color: rgba(254,222,62,255);">Mission:</h4>
+        </div>
+        <div class="vision-mission">
+            <div id="first-value" class="vision-mission-point">
+                <img class="star" src="assets/star.svg" alt="">
+                <h3>Quality and Innovation
+                </h3>
+                <br>
+                  <p>To continuously innovate and provide high-quality die casting and LED lighting products that meet and exceed customer expectations. 
+</p>
+<br>
+            </div>
+<div class="vision-mission-point">
+    <img class="star" src="assets/star.svg" alt="">
+    <h3>Customer Focus</h3>
+    <br>
+    <p id="second-value">
+      To deliver exceptional customer service and build long-term relationships by understanding and fulfilling the unique needs of both domestic and international markets.
+      </p>
+</div>
+<div class="vision-mission-point">
+    <img class="star" src="assets/star.svg" alt="">
+    <h3>Skilled Workforce</h3>
+    <br>
+    <p id="third-value">
+      To foster a culture of continuous improvement and skill development, ensuring our team remains highly trained and motivated.
+      </p>
+</div>
 
-      <!-- Our HQ -->
-      <div class="hq"></div>
+<div class="vision-mission-point">
+    <img class="star" src="assets/star.svg" alt="">
+    <h3>Sustainability</h3>
+    <br>
+    <p id="fourth-value">
+      To promote environmentally responsible practices in all aspects of our manufacturing processes, contributing to a sustainable future.      </p>
+</div>
+        </div>
+    </div>
+      </div>
+
+      <!-- PRODUCT -->
+      <div class="product" id="product">
+        <h1 style="color: white; font-size: 50px; padding-top: 1.5rem;">Products</h1>
+        <div class="product-catalogue">
+          <div class="product-card">
+              <div class="product-container">
+              <h3>MEL
+              </h2>
+              <br>
+              <p>IP Rating:IP67
+              </p>
+              <p>Color temp: 3000 K/5000 K
+              </p>
+              <p>LED Chip: Samsung
+              </p>
+              <p>Body Material: Aluminium Diecasted Body</p>
+              <p>Power: 120, 240, 400, 480, 500, 600 Watt</p>
+              <p>Voltage: 180 - 240 V</p>
+              <p>Efficacy: 120 Lumens / Watt</p>
+              <p>Power Factor: 0.9</p>
+              <p>Weight: 5, 10, 20 Kg</p>
+            </div>
+            <img class="product-img" src="assets/product-mel.webp" alt="">
+          </div>
+
+          <div class="product-card">
+            <div class="product-container">
+            <h3>MES
+            </h2>
+            <br>
+            <p>IP Rating:IP67
+            </p>
+            <p>Color temp: 3000 K/5000 K
+            </p>
+            <p>LED Chip: Samsung
+            </p>
+            <p>Body Material: Aluminium Diecasted Body</p>
+            <p>Power: 60, 90, 100, 120, 200 Watt</p>
+            <p>Voltage: 180 - 240 V</p>
+            <p>Efficacy: 120 Lumens / Watt</p>
+            <p>Power Factor: 0,90</p>
+            <p>Weight: 10 Kg</p>
+          </div>
+          <img class="product-img" src="assets/product-mes.webp" alt="">
+        </div>
+
+        <div class="product-card">
+          <div class="product-container">
+          <h3>SLE-N
+          </h2>
+          <br>
+          <p>IP Rating:IP67
+          </p>
+          <p>Color temp: 3000 K/5000 K
+          </p>
+          <p>LED Chip: Samsung
+          </p>
+          <p>Body Material: Aluminium Diecasted Body</p>
+          <p>Power: 20, 30, 40, 60 Watt</p>
+          <p>Voltage: 180 - 240 V</p>
+          <p>Efficacy: 160 Lm/Watt</p>
+          <p>Power Factor: 0.95</p>
+          <p>Weight: 3 Kg</p>
+        </div>
+        <img class="product-img" src="assets/product-sle-n.webp" alt="">
+      </div>
+        </div>
+      </div>
+
+      <div class="client-project">
+       <!-- PROJECT -->
+        <div class="project" id="project">
+          <h1>Projects</h1>
+          <div class="project-list">            
+            <img src="assets/project-sumatra.webp" alt="Sumatra">
+            <img src="assets/project-tegal.webp">
+            <img src="assets/project-daan-mogot.webp">
+            <img src="assets/project-daan-mogot2.webp">
+            <img src="assets/project-manado.webp">
+            <img src="assets/project-manado2.webp">
+
+          </div>
+        </div>
+
+              <!-- CLIENT -->
+       <div class="client">
+        <h1 style="color: rgba(254,222,62,255);">Client</h1>
+        <div class="client-list glow">
+          <div class="client-container">
+            <img src="assets/astra.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/denpasar.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/musi-rawas.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/medan.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/tangsel.svg" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/sumenep.png" alt="">
+          </div>
+          <div class="client-container">
+            <img src="assets/tegal.png" alt="">
+          </div>
+        </div>
+       </div>
+      </div>
 
       <!-- MESSAGE US -->
-      <div class="message-us"></div>
+      <div class="message-us" id="message-us">
+        <h1 style="color: white; text-align: center; height: 10vh; padding-top: 1.5rem;">Interested to be our client? Message us!</h1>
+        <div class="form-container">
+          <div class="input-form">
+            <div class="form-container">
+            <form action="">
+              <div class="form-group">
+              <label for="name">Name: </label>
+              <input type="text" id="name" name="name">
+              </div>
+              <br>
+              <div class="form-group">
+              <label for="companyName" >Company Name: </label>
+              <input type="text" id="companyName" name="companyName" placeholder="Leave it blank if none">
+              </div>
+              <br>
+              <div class="form-group">
+              <label for="phoneNumber">Phone Number: </label>
+              <input type="text" id="phoneNumber" name="phoneNumber">
+              </div>
+              <br>
+              <div class="form-group">
+              <label for="email">Email: </label>
+              <input type="text" id="email" name="email">
+              </div>
+              <br>
+              <br>
+              <div>
+              <div class="form-group">
+              <label for="reason">Main reason reaching us: </label>
+              </div>
+              <br>
+              <div class="form-group" id="radio-group">
+              <input type="radio" id="purchase" name="reason" value="purchase">
+              <label for="purchase">Purchase items</label>
+              </div>
+              <div class="form-group" id="radio-group">
+              <input type="radio" id="collaborate" name="reason" value="collaborate">
+              <label for="collaborate">Request for a collaboration</label>
+              </div>
+              <div class="form-group" id="radio-group">
+              <input type="radio" id="inquiry" name="reason" value="inquiry">
+              <label for="inquiry">Inquiries / Complaints</label>
+              </div>
+              <div class="form-group">
+              <p style="color: red;" id="reasonError"></p>
+              </div>
+              </div>
+              <br>
+              <div class="form-group">
+              <label for="note">Note: </label>
+              <br>
+              <textarea rows="10" cols="34" id="note" name="note" placeholder="Leave it blank if none"></textarea>
+              </div>
+              <br>
+              <br>
+              <button class="button" id="show-preview">Show Preview</button>
+            </form>
+          </div>
+          </div>
+          <div class="output-form">
+            <div class="input-result">
+            </div>
+            <div class="button-container">
+              <button class="button" id="submit">Looking good, submit</button>
+              <button class="button" id="edit">Edit</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </body>
-    <footer></footer>
+    <footer>
+      <div class="contact-us">
+        <p>PT. Moradon Berlian Sakti</p>
+        <p>No. Telfon: +6221 6510560</p>
+        <p>Jl. Agung Karya II No.12a Blok d, RT.6/RW.4, Papanggo, Tanjung Priok, North Jakarta City, Jakarta 14340, Indonesia</p>
+        <p><a style="color: white !important;" href="https://www.moradon.com">www.moradon.com</a></p>
+      </div>
+      <div class="credit">
+        <p>Copyright &copy 2024 Erica Olivia</p>
+        <p>RevoU June 2024 Fundamental Course Coding Mini Project</p>
+      </div>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
