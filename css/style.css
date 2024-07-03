@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: Ubuntu, Lora;
 }
 
 a {
@@ -28,10 +29,52 @@ a {
 ::placeholder {
   color: gray;
   font-style: italic;
+  text-align: center;
 }
 
 .error::placeholder {
   color: red;
+}
+
+#menu{
+  display: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes changeBackground {
+  0% { background-image: url('/assets/single-lamp.jpg'); }
+  33% { background-image: url('/assets/city-lighting.jpg'); }
+  66% { background-image: url('/assets/lamp aesthetic.jpg'); }
+  100% { background-image: url('/assets/single-lamp.jpg'); }
+}
+
+.home{
+  animation: changeBackground 20s infinite;
+}
+
+form{
+  color: grey;
+}
+
+form input, textarea{
+  box-shadow: 5px 5px 0 0 grey;
+}
+
+.output-form{
+  color: grey;
+}
+
+.button{
+  background-color: white;
+  color: grey;
+  box-shadow: 5px 5px 0 0 grey;
+}
+
+.credit{
+  flex-direction: column;
 }
 
 /* PHONE SIZE DONE*/
@@ -50,7 +93,7 @@ a {
 div.logo {
   width: 100px;
   height: 10%;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .logo img{
@@ -60,7 +103,6 @@ div.logo {
 }
 
 .navbar-options {
-  padding: 5px 2vw 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,7 +131,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 li:hover{
@@ -112,11 +154,10 @@ li:hover{
   padding: 5vw 5vw 6vw 5vw;
   width: 100vw;
   height: 50vh;
-  background-image: url("/assets/single-lamp.jpg");
+  /* background-image: url("/assets/single-lamp.jpg"); */
   background-size: cover;
   background-attachment: fixed;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +301,7 @@ li:hover{
   padding: 2rem;
   color: white;
   width: 100vw;
-  height: 150vh;
+  height: 130vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -289,7 +330,7 @@ li:hover{
 #vision {
   width: 100%;
   height: 10vh;
-  font-size: small;
+  font-size: x-small;
 }
 
 .vision-mission {
@@ -297,13 +338,13 @@ li:hover{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
-  height: 120vh;
+  width: 90%;
+  height: 105vh;
 }
 
 .vision-mission-point {
-  margin: 0.5rem;
-  padding: 1.5rem 1rem;
+  margin: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -311,7 +352,8 @@ li:hover{
   border-radius: 20px;
   text-align: justify;
   transition: transform 0.3s ease-in-out;
-  font-size: small;
+  font-size: x-small;
+  height: 30%;
 }
 
 .vision-mission-point:hover {
@@ -495,6 +537,8 @@ div.project-list img {
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -512,47 +556,46 @@ div.project-list img {
 }
 
 form {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   padding: 1rem;
-  margin-left: 1rem;
   font-size: x-small;
   overflow-y: auto;
 }
 
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
 input{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
-  padding: 2px;
-  margin-left: 50px;
-  width: 200px;
+  padding: 5px;
+  width: 60%;
 }
 
 textarea{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
   margin-top: 5px;
 }
 
-#companyName{
-  margin-left: 10px;
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
 }
 
-#phoneNumber{
-  margin-left: 14.5px;
-}
-
-#companyName, #phoneNumber, #email{
-  margin-top: 10px;
-}
-
-#purchase, #collaborate, #inquiry{
-  margin-left: 0;
-  width: 20px;
-  margin: 5px 0;
+#radio-group input{
   box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
 }
 
 .output-form {
@@ -596,8 +639,7 @@ textarea{
 .button:hover{
   background-color: black;
   color: white;
-  box-shadow: 0 0 5px 5px lightgrey;
-
+  box-shadow: 5px 5px 0 0 lightgrey;
 }
 
 .button-container{
@@ -608,13 +650,9 @@ textarea{
   justify-content: end;
 }
 
-#show-preview{
-  width: 40%;
-}
-
 footer{
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -625,7 +663,7 @@ footer{
 .contact-us{
   color: white;
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -638,7 +676,7 @@ footer{
 .credit{
   color: white;
   width: 100%;
-  height: 10%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -727,11 +765,10 @@ li:hover{
   padding: 5vw 5vw 6vw 5vw;
   width: 100vw;
   height: 50vh;
-  background-image: url("/assets/single-lamp.jpg");
+  /* background-image: url("/assets/single-lamp.jpg"); */
   background-size: cover;
   background-attachment: fixed;
-  background-position-x: left;
-  background-position-y: 550px;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -906,14 +943,14 @@ li:hover{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 90%;
+  width: 80%;
   height: 120vh;
 }
 
 
 .vision-mission-point {
   margin: 0.5rem;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -921,7 +958,8 @@ li:hover{
   border-radius: 20px;
   text-align: justify;
   transition: transform 0.3s ease-in-out;
-  font-size: medium;
+  font-size: small;
+  height: 30%;
 }
 
 .vision-mission-point:hover {
@@ -1105,6 +1143,8 @@ div.project-list img {
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -1122,47 +1162,46 @@ div.project-list img {
 }
 
 form {
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  margin-left: 5rem;
-  font-size: medium;
+  width: 80%;
+  height: 80%;
+  padding: 1rem;
+  font-size: small;
   overflow-y: auto;
+}
+
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
 
 input{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
-  margin-left: 78px;
-  padding: 5px;
-  width: 200px;
+  padding: 10px;
+  width: 60%;
 }
 
 textarea{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
   margin-top: 5px;
 }
 
-#companyName{
-  margin-left: 12px;
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
 }
 
-#phoneNumber{
-  margin-left: 20px;
-}
-
-#companyName, #phoneNumber, #email{
-  margin-top: 10px;
-}
-
-#purchase, #collaborate, #inquiry{
-  margin-left: 0;
-  width: 20px;
-  margin: 5px 0;
+#radio-group input{
   box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
 }
 
 .output-form {
@@ -1204,8 +1243,7 @@ textarea{
 .button:hover{
   background-color: black;
   color: white;
-  box-shadow: 0 0 5px 5px lightgrey;
-
+  box-shadow: 5px 5px 0 0  lightgrey;
 }
 
 .button-container{
@@ -1215,13 +1253,9 @@ textarea{
   justify-content: end;
 }
 
-#show-preview{
-  width: 30%;
-}
-
 footer{
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -1232,7 +1266,7 @@ footer{
 .contact-us{
   color: white;
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1245,7 +1279,7 @@ footer{
 .credit{
   color: white;
   width: 100%;
-  height: 10%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1329,17 +1363,20 @@ li:hover{
   padding: 5vw 5vw 6vw 5vw;
   width: 100vw;
   height: 60vh;
-  background-image: url("/assets/single-lamp.jpg");
+  /* background-image: url("/assets/single-lamp.jpg"); */
   background-size: cover;
   background-attachment: fixed;
-  background-position: 110px 500px;
+  background-position-x: center;
+  background-position-y: top;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
 
 .home-text {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-color: black;
   color: white;
@@ -1683,6 +1720,8 @@ div.project-list img {
 
 .form-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   height: 80vh;
@@ -1702,7 +1741,7 @@ div.project-list img {
 
 form {
   font-size: 25px;
-  width: 100%;
+  width: 60%;
   height: 100%;
   padding: 2rem;
   font-size: medium;
@@ -1710,39 +1749,39 @@ form {
   font-size: large;
 }
 
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
 input{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
-  margin-left: 5rem;
-  padding: 5px;
-  width: 200px;
+  padding: 10px;
+  width: 60%;
 }
 
 textarea{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
   margin-top: 5px;
 }
 
-#companyName{
-  margin-left: 5.5px;
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
 }
 
-#phoneNumber{
-  margin-left: 14.5px;
-}
-
-#companyName, #phoneNumber, #email{
-  margin-top: 10px;
-}
-
-#purchase, #collaborate, #inquiry{
-  margin-left: 0;
-  width: 20px;
-  margin: 5px 0;
+#radio-group input{
   box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
 }
 
 .output-form {
@@ -1782,7 +1821,7 @@ textarea{
 .button:hover{
   background-color: black;
   color: white;
-  box-shadow: 0 0 5px 5px lightgrey;
+  box-shadow: 5px 5px 0 0 lightgrey;
 
 }
 
@@ -1793,13 +1832,9 @@ textarea{
   justify-content: end;
 }
 
-#show-preview{
-  width: 20%;
-}
-
 footer{
   width: 100vw;
-  height: 30vh;
+  height: 40vh;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -1810,10 +1845,12 @@ footer{
 .contact-us{
   color: white;
   width: 100%;
-  height: 90%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 2rem;
   font-size: medium;
 }
@@ -1821,9 +1858,9 @@ footer{
 .credit{
   color: white;
   width: 100%;
-  height: 10%;
+  height: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
   font-size: medium;
@@ -1904,10 +1941,11 @@ li:hover{
   padding: 5vw 5vw 6vw 5vw;
   width: 100vw;
   height: 60vh;
-  background-image: url("/assets/single-lamp.jpg");
+  /* background-image: url("/assets/single-lamp.jpg"); */
   background-size: cover;
   background-attachment: fixed;
-  background-position: 500px 750px;
+  background-position-x: left;
+  background-position-y: bottom;
   display: flex;
   align-items: center;
   position: relative;
@@ -2284,6 +2322,7 @@ div.project-list img {
 
 .form-container {
   display: flex;
+  justify-content: center;
   width: 100%;
   height: 75vh;
 }
@@ -2302,7 +2341,8 @@ div.project-list img {
 
 form {
   font-size: 25px;
-  height: 100%;
+  height: 90%;
+  width: 90%;
   padding: 2rem;
   margin: 20px 0;
   font-size: large;
@@ -2310,44 +2350,43 @@ form {
   font-size: large;
 }
 
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
 input{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
-  margin-left: 5rem;
   padding: 5px;
-  width: 200px;
+  width: 60%;
 }
 
 textarea{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
   margin-top: 5px;
 }
 
-#companyName{
-  margin-left: 5.5px;
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
 }
 
-#phoneNumber{
-  margin-left: 14.5px;
-}
-
-#companyName, #phoneNumber, #email{
-  margin-top: 10px;
-}
-
-#purchase, #collaborate, #inquiry{
-  margin-left: 0;
-  width: 20px;
-  margin: 5px 0;
+#radio-group input{
   box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
 }
 
 .output-form {
   border-left: 5px dashed lightgrey;
-  /* border-style: dashed; */
   padding: 2rem;
   background: whitesmoke;
   backdrop-filter: blur(15px);
@@ -2380,7 +2419,7 @@ textarea{
 .button:hover{
   background-color: black;
   color: white;
-  box-shadow: 0 0 5px 5px lightgrey;
+  box-shadow: 5px 5px lightgrey;
 
 }
 
@@ -2391,7 +2430,7 @@ textarea{
 
 footer{
   width: 100vw;
-  height: 20vh;
+  height: 25vh;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -2401,6 +2440,7 @@ footer{
 .contact-us{
   color: white;
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2411,9 +2451,10 @@ footer{
 .credit{
   color: white;
   width: 50%;
+  height: 100%;
   display: flex;
-  justify-content: end;
-  align-items: center;
+  justify-content: center;
+  align-items: end;
   padding: 2rem;
 }
 
@@ -2492,10 +2533,11 @@ li:hover{
   padding: 5vw 5vw 6vw 5vw;
   width: 100vw;
   height: 60vh;
-  background-image: url("/assets/single-lamp.jpg");
+  /* background-image: url("/assets/single-lamp.jpg"); */
   background-size: cover;
   background-attachment: fixed;
-  background-position: 500px 750px;
+  background-position-x: center;
+  background-position-y: bottom;
   display: flex;
   align-items: center;
   position: relative;
@@ -2873,6 +2915,8 @@ div.project-list img {
 
 .form-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 70vh;
 }
@@ -2892,45 +2936,46 @@ div.project-list img {
 form {
   font-size: 25px;
   height: 100%;
+  width: 60%;
   padding: 2rem;
   margin: 20px 0;
   font-size: large;
   overflow-y: auto;
 }
 
+.form-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
 input{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
-  margin-left: 5rem;
-  padding: 5px;
-  width: 200px;
+  padding: 20px;
+  width: 60%;
 }
 
 textarea{
   border: 1px solid grey;
-  box-shadow: 0 0 5px 5px lightgrey;
   border-radius: 5px;
   margin-top: 5px;
 }
 
-#companyName{
-  margin-left: 5.5px;
+#radio-group{
+  display: flex;
+  border: none;
+  justify-content: start;
 }
 
-#phoneNumber{
-  margin-left: 14.5px;
-}
-
-#companyName, #phoneNumber, #email{
-  margin-top: 10px;
-}
-
-#purchase, #collaborate, #inquiry{
-  margin-left: 0;
-  width: 20px;
-  margin: 5px 0;
+#radio-group input{
   box-shadow: none;
+  width: auto;
+}
+
+#radio-group label{
+  padding-left: 10px !important;
 }
 
 .output-form {
@@ -2968,7 +3013,7 @@ textarea{
 .button:hover{
   background-color: black;
   color: white;
-  box-shadow: 0 0 5px 5px lightgrey;
+  box-shadow: 5px 5px lightgrey;
 
 }
 
@@ -3000,9 +3045,8 @@ footer{
   color: white;
   width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
 }
-
 }

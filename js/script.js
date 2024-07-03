@@ -1,9 +1,8 @@
 window.onload = ()=>{
+  // VARIABLES
     const userNameSection = document.getElementById("username");
     userNameSection.innerHTML = '';
-    const navbar = document.querySelector(".navbar");
     
-    // FORM VALIDATION
     const nameInput = document.getElementById("name");
     const companyInput = document.getElementById("companyName");
     let companyFinalText = "";
@@ -19,6 +18,7 @@ window.onload = ()=>{
     const finalInputResult = document.querySelector(".input-result");
     
     // BUTTONS
+    const logo = document.querySelector(".logo");
     const navHome = document.getElementById("li-home");
     const navProfile = document.getElementById("li-profile");
     const navProduct = document.getElementById("li-product");
@@ -28,20 +28,20 @@ window.onload = ()=>{
     const submit = document.getElementById("submit");
     const edit = document.getElementById("edit");
     
-     function initializePage(){
-        do{
-            const userName = prompt("Hi, please enter your name! ^^");
-        
-            if (userName == '' || userName == null) {
-                userNameSection.innerHTML += " there!";
-            } else if(validateCharacterInput(userName)) {
-                userNameSection.innerHTML += " " + userName + "!";
-            } else {
-                alert("Please only enter characters!");
-            }
-        }while(userNameSection.innerHTML ==  '' || userName == null);
-     }
-    
+    // FUNCTIONS
+    function initializePage(){
+       do{
+           const userName = prompt("Hi, please enter your name! ^^");
+       
+           if (userName == '' || userName == null) {
+               userNameSection.innerHTML += " there!";
+           } else if(validateCharacterInput(userName)) {
+               userNameSection.innerHTML += " " + userName + "!";
+           } else {
+               alert("Please only enter characters!");
+           }
+       }while(userNameSection.innerHTML ==  '');
+    }
     
     function validateCharacterInput(input) {
       // Regex to allow only alphabets
@@ -63,14 +63,24 @@ window.onload = ()=>{
     
     function clearForm() {
         nameInput.value = '';
+        nameInput.placeholder = '';
         companyInput.value = '';
         phoneNumberInput.value = '';
+        phoneNumberInput.placeholder = '';
         emailInput.value = '';
+        emailInput.placeholder = '';
         noteInput.value = '';
         nameInput.classList.remove("error");
         companyInput.classList.remove("error");
         phoneNumberInput.classList.remove("error");
         emailInput.classList.remove("error");
+        // UNCHECK SELECTED RADIO BUTTON
+        const radios = document.querySelectorAll('input[type="radio"][name="reason"]');
+        radios.forEach(radio => radio.checked = false);
+
+        companyFinalText.innerHTML = '';
+        reasonFinalText = '';
+        noteFinalText = ''
         finalInputResult.innerHTML = '';
         submit.style.display = "none";
         edit.style.display = "none";
@@ -85,40 +95,46 @@ window.onload = ()=>{
     }
 
     // SCROLL TO PARTICULAR DIV
-    document.querySelector('#li-home').addEventListener('click', ()=>{
+    logo.addEventListener('click',()=>{
+      document.querySelector('#home').scrollIntoView({
+        behavior: 'smooth'
+      });
+    })
+
+    navHome.addEventListener('click', ()=>{
         document.querySelector('#home').scrollIntoView({
             behavior: 'smooth'
           });
     });
 
-    document.querySelector('#li-profile').addEventListener('click', ()=>{
+    navProfile.addEventListener('click', ()=>{
         document.querySelector('#our-profile').scrollIntoView({
             behavior: 'smooth'
           });
     });
 
-    document.querySelector('#li-product').addEventListener('click', ()=>{
+    navProduct.addEventListener('click', ()=>{
         document.querySelector('#product').scrollIntoView({
             behavior: 'smooth'
           });
     });
 
-    document.querySelector('#li-project').addEventListener('click', ()=>{
+    navProject.addEventListener('click', ()=>{
         document.querySelector('#project').scrollIntoView({
             behavior: 'smooth'
           });
     });
 
-    document.querySelector('#li-message').addEventListener('click', ()=>{
+    navMessage.addEventListener('click', ()=>{
         document.querySelector('#message-us').scrollIntoView({
             behavior: 'smooth'
           });
     });
 
 
-    // INPUT FORM HANDLER
+    // INPUT FORM HANDLER (FORM VALIDATION)
     preview.addEventListener("click", function (event) {
-        event.preventDefault();
+    event.preventDefault();
     // All validations are passed when isValidationDone's value is 4
     let isValidationDone = 0;
       finalInputResult.innerHTML = "";
@@ -129,7 +145,7 @@ window.onload = ()=>{
         nameInput.classList.add("error");
         nameInput.value = '';
         nameInput.placeholder = '';
-        nameInput.placeholder = "Please enter characters only";
+        nameInput.placeholder = "*Please enter characters only";
       } else {
         isValidationDone++;
       }
@@ -144,7 +160,7 @@ window.onload = ()=>{
         phoneNumberInput.classList.add("error");
         phoneNumberInput.value = "";
         phoneNumberInput.placeholder = '';
-        phoneNumberInput.placeholder = "Please enter numbers only";
+        phoneNumberInput.placeholder = "*Please enter numbers only";
       } else {
         isValidationDone++;
       }
@@ -154,7 +170,7 @@ window.onload = ()=>{
         emailInput.classList.add("error");
         emailInput.value = '';
         emailInput.placeholder = '';
-        emailInput.placeholder = "Missing email characteristics (./@)";
+        emailInput.placeholder = "*Missing (alphabeths/./@)";
       } else {
         isValidationDone++;
       }
@@ -218,6 +234,7 @@ window.onload = ()=>{
         clearForm();
     })
     
+    // CALL INIT FUNCTION
     initializePage();
 }
 

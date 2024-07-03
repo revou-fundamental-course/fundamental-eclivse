@@ -11,6 +11,7 @@
       <div class="logo"><img src="assets/logo.webp" alt="" /></div>
       <ul class="navbar-options">
         <li id="username-container">Hi <span id="username"></span></li>
+        <li id="menu">Menu</li>
         <li id="li-home" data-target="home">Home</li>
         <li id="li-profile" data-target="our-profile">Our Profile</li>
         <li id="li-product" data-target="product">Products</li>
@@ -250,40 +251,61 @@
         <h1 style="color: white; text-align: center; height: 10vh; padding-top: 1.5rem;">Interested to be our client? Message us!</h1>
         <div class="form-container">
           <div class="input-form">
+            <div class="form-container">
             <form action="">
+              <div class="form-group">
               <label for="name">Name: </label>
               <input type="text" id="name" name="name">
+              </div>
               <br>
+              <div class="form-group">
               <label for="companyName" >Company Name: </label>
               <input type="text" id="companyName" name="companyName" placeholder="Leave it blank if none">
+              </div>
               <br>
+              <div class="form-group">
               <label for="phoneNumber">Phone Number: </label>
               <input type="text" id="phoneNumber" name="phoneNumber">
+              </div>
               <br>
+              <div class="form-group">
               <label for="email">Email: </label>
               <input type="text" id="email" name="email">
+              </div>
               <br>
               <br>
+              <div>
+              <div class="form-group">
               <label for="reason">Main reason reaching us: </label>
-              <br><br>
+              </div>
+              <br>
+              <div class="form-group" id="radio-group">
               <input type="radio" id="purchase" name="reason" value="purchase">
               <label for="purchase">Purchase items</label>
-              <br>
+              </div>
+              <div class="form-group" id="radio-group">
               <input type="radio" id="collaborate" name="reason" value="collaborate">
               <label for="collaborate">Request for a collaboration</label>
-              <br>
+              </div>
+              <div class="form-group" id="radio-group">
               <input type="radio" id="inquiry" name="reason" value="inquiry">
               <label for="inquiry">Inquiries / Complaints</label>
-              <br>
+              </div>
+              <div class="form-group">
               <p style="color: red;" id="reasonError"></p>
+              </div>
+              </div>
               <br>
+              <div class="form-group">
               <label for="note">Note: </label>
               <br>
               <textarea rows="10" cols="34" id="note" name="note" placeholder="Leave it blank if none"></textarea>
+              </div>
               <br>
               <br>
               <button class="button" id="show-preview">Show Preview</button>
             </form>
+          </div>
           </div>
           <div class="output-form">
             <div class="input-result">
@@ -306,6 +328,7 @@
       </div>
       <div class="credit">
         <p>Copyright &copy 2024 Erica Olivia</p>
+        <p>RevoU June 2024 Fundamental Course Coding Mini Project</p>
       </div>
     </footer>
     <script src="js/script.js"></script>
