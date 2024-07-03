@@ -45,10 +45,10 @@ a {
 }
 
 @keyframes changeBackground {
-  0% { background-image: url('/assets/single-lamp.jpg'); }
-  33% { background-image: url('/assets/city-lighting.jpg'); }
-  66% { background-image: url('/assets/lamp aesthetic.jpg'); }
-  100% { background-image: url('/assets/single-lamp.jpg'); }
+  0% { background-image: url('../assets/single-lamp.jpg'); }
+  33% { background-image: url('../assets/city-lighting.jpg'); }
+  66% { background-image: url('../assets/lamp aesthetic.jpg'); }
+  100% { background-image: url('../assets/single-lamp.jpg'); }
 }
 
 .home{
